@@ -1,4 +1,4 @@
-setDefaultTab("Tools")
+setDefaultTab("News")
 local toFollow = storage.toFollow and storage.toFollow or ""
 local toFollowPos = {}
 UI.TextEdit(storage.toFollow or toFollow, function(widget, newText)
