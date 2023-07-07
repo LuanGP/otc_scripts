@@ -3,6 +3,7 @@ local toFollow = storage.toFollow and storage.toFollow or ""
 local toFollowPos = {}
 UI.TextEdit(storage.toFollow or toFollow, function(widget, newText)
   storage.toFollow = newText
+  followMacro:setText("follow "..newText)
 end)
 local followMacro = macro(20, "follow "..storage.toFollow, function()
   local target = getCreatureByName(storage.toFollow)
