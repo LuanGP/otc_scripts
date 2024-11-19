@@ -211,3 +211,17 @@ macro(100, "Ataca o Monstro com Menor HP", function()
 		g_game.attack(target)
 	end
 end)
+--------------------------------------------------------- button resetar
+reset = macro(200, function()
+	--say("!resetar")
+end)
+onTextMessage(function(mode, text)
+	if text:find("You were downgraded from") then
+		if reset:isOn() then
+			say("!resetar")
+		end
+	end
+end)
+addIcon("reset", {item=9642, text="Reset"}, function(icon, isOn)
+	reset.setOn(isOn)
+end)
