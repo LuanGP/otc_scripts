@@ -63,9 +63,6 @@ local btnDungeon = UI.Button("Start Dungeon", function()
 	storage.tmpDungeon = os.time() + (60*60)
 end)
 btnDungeon:setColor("#00f6ff")
-local btnDungeonReset = UI.Button("Test Dungeon", function()
-	storage.tmpDungeon = os.time() + 700
-end)
 ------------------------------------------------------ contador BOSS
 local contadorBoss = UI.Label("0")
 storage.tmpBoss = storage.tmpBoss or 0
