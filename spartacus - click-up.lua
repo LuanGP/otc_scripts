@@ -1,3 +1,4 @@
+setDefaultTab("Tools")
 local itemIdsToUse, useRange, moveRange = {8997, 3043}, 1, 7
 local function findItemsInLayer(layerIndex)
 	local searchLayers = {
