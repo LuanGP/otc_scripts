@@ -25,7 +25,7 @@ local function findItemsInLayer(layerIndex)
 							return true
 						elseif distance > useRange and distance <= moveRange then
 							if autoWalk(tile:getPosition(), moveRange, {ignoreNonPathable = true, precision = 1}) then
-								delay(200)
+								delay(100)
 								return true
 							end
 						end
@@ -37,7 +37,7 @@ local function findItemsInLayer(layerIndex)
 	return findItemsInLayer(layerIndex + 1)
 end
 
-macro(200, "click UP", function()
+macro(100, "click UP", function()
 	if not findItemsInLayer(1) then
 		if CaveBot.isOff() then
 			print("ativando cavebot")
